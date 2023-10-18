@@ -1,0 +1,9 @@
+function sendEmail() {
+  var recipient = "m.v.boiko@rcit.ukr.education"; 
+  var subject = "Lab 4.2";
+  var body = "Юхимчук Денис";
+
+  MailApp.sendEmail(recipient, subject, body);
+
+  Logger.log("Відправлено листа з темою: " + subject + " до " + recipient);
+}
