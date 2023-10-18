@@ -1,0 +1,118 @@
+const students = [
+    {
+        firstName: "Іван",
+        lastName: "Петров",
+        birthYear: 2005,
+        marks: [
+          {
+            name: 'math',
+            mark: 4,
+          },
+          {
+            name: 'physics',
+            mark: 5,
+          }, 
+          {
+            name: 'Ukrainianlanguage',
+            mark: 5,
+          }, 
+        ]  
+    },
+    {
+        firstName: "Коля",
+        lastName: "Чехов",
+        birthYear: 2006,
+        marks: [
+          {
+            name: 'math',
+            mark: 3,
+          },
+          {
+            name: 'physics',
+            mark: 3,
+          }, 
+          {
+            name: 'Ukrainianlanguage',
+            mark: 3,
+          }, 
+        ]  
+    },
+    {
+        firstName: "Діма",
+        lastName: "Любін",
+        birthYear: 2005,
+        marks: [
+          {
+            name: 'math',
+            mark: 2,
+          },
+          {
+            name: 'physics',
+            mark: 4,
+          }, 
+          {
+            name: 'Ukrainianlanguage',
+            mark: 3,
+          }, 
+        ]  
+    },
+    {
+        firstName: "Іван",
+        lastName: "Івановіч",
+        birthYear: 2004,
+        marks: [
+          {
+            name: 'math',
+            mark: 4,
+          },
+          {
+            name: 'physics',
+            mark: 3,
+          }, 
+          {
+            name: 'Ukrainianlanguage',
+            mark: 4,
+          }, 
+        ]  
+    },
+    {
+        firstName: "Саша",
+        lastName: "Любин",
+        birthYear: 2005,
+        marks: [
+          {
+            name: 'math',
+            mark: 4,
+          },
+          {
+            name: 'physics',
+            mark: 3,
+          }, 
+          {
+            name: 'Ukrainianlanguage',
+            mark: 4,
+          }, 
+        ]  
+    }
+];
+
+
+function printStudentInfo(studentList) {
+  studentList.forEach(function (student) {
+    console.log("-----------------------------");
+    console.log("Name: " + student.firstName);
+    console.log("Last Name: " + student.lastName);
+    console.log("Birth Year: " + student.birthYear);
+
+    let summa = 0;
+    student.marks.forEach(function (subjectInfo) {
+      summa += subjectInfo.mark;
+    });
+
+    console.log("Average mark: " + summa / student.marks.length);
+  });
+}
+
+printStudentInfo(students);
+
+
