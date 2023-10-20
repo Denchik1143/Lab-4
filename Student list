@@ -106,13 +106,13 @@ function printStudentInfo(studentList) {
 
     let summa = 0;
     student.marks.forEach(function (subjectInfo) {
+      console.log("Subject: " + subjectInfo.name);
+      console.log("Mark: " + subjectInfo.mark);
       summa += subjectInfo.mark;
     });
 
-    console.log("Average mark: " + summa / student.marks.length);
+    console.log("Average mark: " + (summa / student.marks.length));
   });
 }
 
 printStudentInfo(students);
-
-
